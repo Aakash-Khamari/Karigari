@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karigari - Revitalizing Heritage for a Greener Tomorrow</title>
+    
+    <meta
+      name="description"
+      content="Karigari offers beautiful, handcrafted terracotta products for sustainable living. Discover our story and explore our collection of kitchenware, home decor, and more."
+    />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -182,12 +187,15 @@
       <section
         class="relative h-screen flex items-center justify-center text-center"
       >
-        <!-- Image Tag for Background -->
+        <!-- FIX: Reverting to a simple <img> tag to match your available image file -->
         <img
-          src="images/hero-background.png"
+          src="images/hero-background.webp"
           alt="A beautiful arrangement of terracotta products"
           class="absolute top-0 left-0 w-full h-full object-cover z-0"
+          width="1920"
+          height="1080"
         />
+
         <!-- Overlay -->
         <div
           class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"
@@ -373,72 +381,79 @@
               A glimpse into our world of handcrafted terracotta.
             </p>
           </div>
-
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="grid gap-4">
               <div class="fade-in-element">
                 <img
                   class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/gallery-kitchenware.png"
+                  src="images/gallery-kitchenware.webp"
                   alt="Terracotta Kitchenware"
+                  width="500" height="700"
                 />
               </div>
               <div class="fade-in-element">
                 <img
                   class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/gallery-wall-hanging.png"
+                  src="images/gallery-wall-hanging.webp"
                   alt="Decorative Terracotta Wall Hanging"
+                  width="500" height="700"
                 />
               </div>
             </div>
             <div class="grid gap-4">
-              <div class="fade-in-element">
-                <img
-                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/gallery-jewellery.png"
-                  alt="Handmade terracotta jewelry"
-                />
+                <div class="fade-in-element">
+                  <img
+                    class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                    src="images/gallery-jewellery.webp"
+                    alt="Handmade terracotta jewelry"
+                    width="500" height="700"
+                  />
+                </div>
+                <div class="fade-in-element">
+                  <img
+                    class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                    src="images/gallery-planters.webp"
+                    alt="A collection of terracotta planters"
+                    width="500" height="700"
+                  />
+                </div>
               </div>
-              <div class="fade-in-element">
-                <img
-                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/gallery-planters.png"
-                  alt="A collection of terracotta planters"
-                />
+              <div class="grid gap-4">
+                <div class="fade-in-element">
+                  <img
+                    class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                    src="images/gallery-decor-items.webp"
+                    alt="Minimalist terracotta decor items"
+                    width="500" height="700"
+                  />
+                </div>
+                <div class="fade-in-element">
+                  <img
+                    class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                    src="images/gallery-pots-jars.webp"
+                    alt="Terracotta pots and jars"
+                    width="500" height="700"
+                  />
+                </div>
               </div>
-            </div>
-            <div class="grid gap-4">
-              <div class="fade-in-element">
-                <img
-                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/gallery-decor-items.png"
-                  alt="Minimalist terracotta decor items"
-                />
+              <div class="grid gap-4">
+                <div class="fade-in-element">
+                  <img
+                    class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                    src="images/gallery-lighting.webp"
+                    alt="Custom terracotta lighting fixture"
+                    width="500" height="700"
+                  />
+                </div>
+                <div class="fade-in-element">
+                  <img
+                    class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                    src="images/artisan-hands.webp"
+                    alt="Artisan working on a piece"
+                    width="500" height="700"
+                  />
+                </div>
               </div>
-              <div class="fade-in-element">
-                <img
-                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/gallery-pots-jars.png"
-                  alt="Terracotta pots and jars"
-                />
-              </div>
-            </div>
-            <div class="grid gap-4">
-              <div class="fade-in-element">
-                <img
-                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/gallery-lighting.png"
-                  alt="Custom terracotta lighting fixture"
-                />
-              </div>
-              <div class="fade-in-element">
-                <img
-                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                  src="images/artisan-hands.png"
-                  alt="Artisan working on a piece"
-                />
-              </div>
-            </div>
           </div>
           <div class="text-center mt-16 fade-in-element">
             <a
@@ -457,11 +472,9 @@
     ================================ -->
     <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
       <div class="container mx-auto px-6">
-        <!-- MODIFICATION: Added grid-cols-1 for mobile -->
         <div
           class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left"
         >
-          <!-- Column 1 -->
           <div class="md:col-span-1">
             <h3 class="font-lora text-2xl font-bold text-white mb-4">
               Karigari
@@ -471,7 +484,6 @@
               clay product at a time.
             </p>
           </div>
-          <!-- Column 2 -->
           <div>
             <h4 class="font-semibold text-white mb-4 tracking-wide">
               Quick Links
@@ -505,7 +517,6 @@
               </li>
             </ul>
           </div>
-          <!-- Column 3 -->
           <div>
             <h4 class="font-semibold text-white mb-4 tracking-wide">
               Contact Us
@@ -541,7 +552,6 @@
               </li>
             </ul>
           </div>
-          <!-- Column 4 -->
           <div>
             <h4 class="font-semibold text-white mb-4 tracking-wide">
               Let's Collaborate
@@ -580,39 +590,39 @@
         JAVASCRIPT
     ================================ -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const header = document.getElementById("main-header");
-        window.addEventListener("scroll", () => {
-          header.classList.toggle("header-scrolled", window.scrollY > 50);
+        document.addEventListener("DOMContentLoaded", function () {
+          const header = document.getElementById("main-header");
+          window.addEventListener("scroll", () => {
+            header.classList.toggle("header-scrolled", window.scrollY > 50);
+          });
+  
+          const mobileMenuButton = document.getElementById("mobile-menu-button");
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+  
+          document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+  
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+  
+          const elementsToAnimate = document.querySelectorAll(".fade-in-element");
+          elementsToAnimate.forEach((el) => {
+            observer.observe(el);
+          });
         });
-
-        const mobileMenuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenuButton.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-        });
-
-        document.getElementById("current-year").textContent =
-          new Date().getFullYear();
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-              }
-            });
-          },
-          {
-            threshold: 0.1,
-          }
-        );
-
-        const elementsToAnimate = document.querySelectorAll(".fade-in-element");
-        elementsToAnimate.forEach((el) => {
-          observer.observe(el);
-        });
-      });
-    </script>
+      </script>
   </body>
 </html>
