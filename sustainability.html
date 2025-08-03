@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability - Karigari</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS for Custom Styles & Animations -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEFBF6;
+            color: #4A4A4A;
+        }
+        h1, h2, h3, .font-lora {
+            font-family: 'Lora', serif;
+        }
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(30, 45, 40, 0.6); /* Greenish, earthy overlay */
+            z-index: 1;
+        }
+        #main-header {
+            transition: background-color 0.4s ease-out, box-shadow 0.4s ease-out, color 0.4s ease-out;
+        }
+        .header-scrolled {
+            background-color: rgba(250, 245, 239, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .header-scrolled #header-logo,
+        .header-scrolled nav a,
+        .header-scrolled #mobile-menu-button {
+            color: #44403c;
+        }
+        .header-scrolled nav a:hover {
+            color: #D97706;
+        }
+        .fade-in-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        nav a.active-link {
+            color: #D97706;
+            font-weight: bold;
+        }
+        .header-scrolled nav a.active-link {
+            color: #D97706;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===============================
+         HEADER & NAVIGATION
+    ================================ -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" id="header-logo" class="font-lora text-3xl font-bold tracking-wider text-white transition-colors duration-300">Karigari</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-white hover:text-amber-300 transition-colors duration-300">Home</a>
+                <a href="our-story.html" class="text-white hover:text-amber-300 transition-colors duration-300">Our Story</a>
+                <a href="gallery.html" class="text-white hover:text-amber-300 transition-colors duration-300">Our Work</a>
+                <a href="sustainability.html" class="text-white hover:text-amber-300 transition-colors duration-300 active-link">Sustainability</a>
+                <a href="contact.html" class="text-white hover:text-amber-300 transition-colors duration-300">Contact</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FAF5EF] bg-opacity-95 backdrop-blur-sm">
+            <a href="index.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Home</a>
+            <a href="our-story.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Our Story</a>
+            <a href="gallery.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Our Work</a>
+            <a href="sustainability.html" class="block text-amber-600 font-bold py-3 px-6 text-center bg-amber-100">Sustainability</a>
+            <a href="contact.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===============================
+             PAGE HERO
+        ================================ -->
+        <section class="relative h-[50vh] flex items-center justify-center text-center text-white bg-cover bg-center bg-fixed" style="background-image: url('images/sustainability-hero.png');">
+            <div class="hero-overlay"></div>
+            <div class="relative z-10 px-4 fade-in-element is-visible">
+                <h1 class="text-4xl md:text-6xl font-bold font-lora">Woven into the Earth</h1>
+                <p class="text-lg md:text-xl mt-4 text-stone-200">Our commitment to a healthier planet and empowered communities.</p>
+            </div>
+        </section>
+
+        <!-- ===============================
+             ECO-FRIENDLY PRACTICES
+        ================================ -->
+        <section class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in-element">
+                        <img src="images/eco-materials.png" alt="Natural clay and materials" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                    </div>
+                    <div class="fade-in-element">
+                        <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6">From Earth, For Earth</h2>
+                        <p class="mb-4 text-lg text-stone-600">
+                            Our sustainability journey begins with our most fundamental choice: material. We exclusively use locally sourced, natural clay, a resource that is abundant, non-toxic, and entirely biodegradable. Unlike plastics, our products can return to the earth without a trace, leaving no harmful legacy.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-stone-600">
+                            <li><strong>Zero-Waste Production:</strong> Unfired clay scraps are recycled back into new creations.</li>
+                            <li><strong>Low-Energy Kilns:</strong> We utilize traditional firing techniques that are less energy-intensive.</li>
+                            <li><strong>Natural Pigments:</strong> All colors are derived from natural, lead-free minerals.</li>
+                            <li><strong>Water Conservation:</strong> We employ water recycling systems in our workshops.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================
+             UN SDG ALIGNMENT
+        ================================ -->
+        <section class="bg-stone-100 py-20 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element">Aligned with Global Goals</h2>
+                <p class="max-w-3xl mx-auto mb-16 text-lg text-stone-600 fade-in-element">Our work contributes directly to the UN's Sustainable Development Goals (SDGs), turning local action into global impact.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+                    <div class="fade-in-element">
+                        <img src="https://via.placeholder.com/120x120/F53E2D/FFFFFF?text=SDG+8" alt="SDG 8: Decent Work and Economic Growth" class="mx-auto mb-4 rounded-lg">
+                        <h3 class="font-lora font-semibold text-slate-800">Decent Work & Economic Growth</h3>
+                        <p class="text-sm">Providing fair wages and stable employment for artisans.</p>
+                    </div>
+                    <div class="fade-in-element" style="transition-delay: 150ms;">
+                        <img src="https://via.placeholder.com/120x120/DDA63A/FFFFFF?text=SDG+11" alt="SDG 11: Sustainable Cities and Communities" class="mx-auto mb-4 rounded-lg">
+                        <h3 class="font-lora font-semibold text-slate-800">Sustainable Cities & Communities</h3>
+                        <p class="text-sm">Preserving cultural heritage and promoting local craftsmanship.</p>
+                    </div>
+                    <div class="fade-in-element" style="transition-delay: 300ms;">
+                        <img src="https://via.placeholder.com/120x120/4C9F38/FFFFFF?text=SDG+12" alt="SDG 12: Responsible Consumption and Production" class="mx-auto mb-4 rounded-lg">
+                        <h3 class="font-lora font-semibold text-slate-800">Responsible Consumption</h3>
+                        <p class="text-sm">Offering a durable, plastic-free alternative for conscious consumers.</p>
+                    </div>
+                    <div class="fade-in-element" style="transition-delay: 450ms;">
+                        <img src="https://via.placeholder.com/120x120/10689D/FFFFFF?text=SDG+15" alt="SDG 15: Life on Land" class="mx-auto mb-4 rounded-lg">
+                        <h3 class="font-lora font-semibold text-slate-800">Life On Land</h3>
+                        <p class="text-sm">Using 100% biodegradable materials that do not harm terrestrial ecosystems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================
+             ETHICAL PRODUCTION
+        ================================ -->
+        <section class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in-element md:order-2">
+                        <img src="images/ethical-production.png" alt="Artisans working in a positive environment" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                    </div>
+                    <div class="fade-in-element md:order-1">
+                        <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6">People and Planet First</h2>
+                        <p class="mb-4 text-lg text-stone-600">
+                           True sustainability is about more than just materials; it's about people. Our ethical production model is designed to empower our artisans, not exploit them. We see them as partners in our mission, and we are committed to fostering an environment of respect, safety, and growth.
+                        </p>
+                        <p class="text-stone-600">
+                           Every Karigari purchase directly supports fair wages, safe working conditions, and invests in skill-development programs that ensure this ancient craft has a prosperous future. This approach guarantees that our beautiful products are also beautiful in the way they are made.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ===============================
+         FOOTER
+    ================================ -->
+    <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
+        <!-- ... (Footer code is the same as other pages) ... -->
+    </footer>
+
+    <!-- Internal JavaScript for Interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ... (JavaScript is the same as other pages) ...
+        });
+    </script>
+</body>
+</html>
