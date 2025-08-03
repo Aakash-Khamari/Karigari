@@ -1,230 +1,608 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karigari - Revitalizing Heritage for a Greener Tomorrow</title>
-    
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Internal CSS for Custom Styles & Animations -->
+    <!-- Internal CSS -->
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FEFBF6;
-            color: #4A4A4A;
-        }
-        h1, h2, h3, .font-lora {
-            font-family: 'Lora', serif;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fefbf6;
+        color: #4a4a4a;
+      }
+      h1,
+      h2,
+      h3,
+      .font-lora {
+        font-family: "Lora", serif;
+      }
+      #main-header {
+        transition: all 0.4s ease-out;
+      }
+      
+      .header-scrolled {
+        background-color: rgba(
+          250,
+          245,
+          239,
+          0.95
+        ); /* Semi-transparent creamy beige */
+        backdrop-filter: blur(
+          10px
+        ); /* This adds the frosted glass/blur effect */
+        -webkit-backdrop-filter: blur(
+          10px
+        ); /* For Safari browser compatibility */
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
 
-        .hero-overlay::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        #main-header {
-            transition: background-color 0.4s ease-out, box-shadow 0.4s ease-out, color 0.4s ease-out;
-        }
-        
-        .header-scrolled {
-            background-color: rgba(250, 245, 239, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .header-scrolled #header-logo,
-        .header-scrolled nav a,
-        .header-scrolled #mobile-menu-button {
-            color: #44403c;
-        }
-
-        .header-scrolled nav a:hover {
-            color: #D97706;
-        }
-
-        .fade-in-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in-element.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        nav a.active-link {
-            color: #D97706;
-            font-weight: bold;
-        }
-        .header-scrolled nav a.active-link {
-            color: #D97706;
-        }
+      .header-scrolled #header-logo,
+      .header-scrolled nav a,
+      .header-scrolled #mobile-menu-button {
+        color: #44403c;
+      }
+      .header-scrolled nav a:hover {
+        color: #d97706;
+      }
+      .fade-in-element {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .fade-in-element.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      nav a.active-link {
+        color: #d97706;
+        font-weight: bold;
+      }
+      .header-scrolled nav a.active-link {
+        color: #d97706;
+      }
     </style>
-</head>
-<body class="antialiased">
-
+  </head>
+  <body class="antialiased">
     <!-- ===============================
          HEADER & NAVIGATION
     ================================ -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" id="header-logo" class="font-lora text-3xl font-bold tracking-wider text-white transition-colors duration-300">Karigari</a>
-            
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-white hover:text-amber-300 transition-colors duration-300 active-link">Home</a>
-                <a href="our-story.html" class="text-white hover:text-amber-300 transition-colors duration-300">Our Story</a>
-                <a href="gallery.html" class="text-white hover:text-amber-300 transition-colors duration-300">Our Work</a>
-                <a href="sustainability.html" class="text-white hover:text-amber-300 transition-colors duration-300">Sustainability</a>
-                <a href="contact.html" class="text-white hover:text-amber-300 transition-colors duration-300">Contact</a>
-            </nav>
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          id="header-logo"
+          class="font-lora text-3xl font-bold tracking-wider text-white transition-colors duration-300"
+          >Karigari</a
+        >
 
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white focus:outline-none transition-colors duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300 active-link"
+            >Home</a
+          >
+          <a
+            href="our-story.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Our Story</a
+          >
+          <a
+            href="gallery.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Our Work</a
+          >
+          <a
+            href="sustainability.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Sustainability</a
+          >
+          <a
+            href="contact.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Contact</a
+          >
+        </nav>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-[#FAF5EF] bg-opacity-95 backdrop-blur-sm">
-            <a href="index.html" class="block text-amber-600 font-bold py-3 px-6 text-center bg-amber-100">Home</a>
-            <a href="our-story.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Our Story</a>
-            <a href="gallery.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Our Work</a>
-            <a href="sustainability.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Sustainability</a>
-            <a href="contact.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Contact</a>
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-white focus:outline-none transition-colors duration-300"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
         </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-[#FAF5EF] bg-opacity-95 backdrop-blur-sm"
+      >
+        <a
+          href="index.html"
+          class="block text-amber-600 font-bold py-3 px-6 text-center bg-amber-100"
+          >Home</a
+        >
+        <a
+          href="our-story.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Our Story</a
+        >
+        <a
+          href="gallery.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Our Work</a
+        >
+        <a
+          href="sustainability.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Sustainability</a
+        >
+        <a
+          href="contact.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Contact</a
+        >
+      </div>
     </header>
 
     <main>
-        <!-- ===============================
-             HERO SECTION
+      <!-- ===============================
+             HERO SECTION - UPDATED WITH <img> TAG
         ================================ -->
-        <section id="home" class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center bg-fixed" style="background-image: url('images/hero-background.png');">
-            <div class="hero-overlay"></div>
-            <div class="relative z-10 px-4 fade-in-element is-visible">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-lora leading-tight mb-4">
-                    Revitalizing Heritage for a Greener Tomorrow
-                </h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-stone-200">
-                    Handcrafted terracotta for sustainable living. Where timeless tradition meets modern design.
-                </p>
-                <div class="space-x-4">
-                    <a href="our-story.html" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105">
-                        Explore Our Story
-                    </a>
-                    <a href="gallery.html" class="border-2 border-white hover:bg-white hover:text-slate-800 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105">
-                        View Our Work
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section
+        class="relative h-screen flex items-center justify-center text-center"
+      >
+        <!-- Image Tag for Background -->
+        <img
+          src="images/hero-background.png"
+          alt="A beautiful arrangement of terracotta products"
+          class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        />
+        <!-- Overlay -->
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"
+        ></div>
+        <!-- Content -->
+        <div class="relative z-20 px-4 text-white fade-in-element is-visible">
+          <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-bold font-lora leading-tight mb-4"
+          >
+            Revitalizing Heritage for a Greener Tomorrow
+          </h1>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-stone-200">
+            Handcrafted terracotta for sustainable living. Where timeless
+            tradition meets modern design.
+          </p>
+          <div class="space-x-4">
+            <a
+              href="our-story.html"
+              class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105"
+            >
+              Explore Our Story
+            </a>
+            <a
+              href="gallery.html"
+              class="border-2 border-white hover:bg-white hover:text-slate-800 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105"
+            >
+              View Our Work
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <!-- ===============================
-             NEW: OUR PURPOSE SECTION (Invitation to Our Story)
+      <!-- ===============================
+             OUR PURPOSE SECTION
         ================================ -->
-        <section id="our-purpose" class="py-20 md:py-24 bg-stone-100 text-center">
-            <div class="container mx-auto px-6 fade-in-element">
-                <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6">A Story Baked in Earth and Purpose</h2>
-                <p class="max-w-3xl mx-auto text-lg text-stone-600 mb-8">
-                    Karigari is more than a brand; it's a movement born from a desire to reconnect with our roots and reshape our future. Discover how a timeless craft is being reimagined to solve modern problems—from plastic pollution to the preservation of cultural heritage.
-                </p>
-                <a href="our-story.html" class="font-bold text-amber-700 hover:text-amber-800 group text-lg">
-                    Read Our Full Story
-                    <span class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">&rarr;</span>
-                </a>
-            </div>
-        </section>
-        
-        <!-- ===============================
-             HIGHLIGHTS / PILLARS SECTION (Unchanged)
-        ================================ -->
-        <section class="py-20 md:py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element">Our Core Principles</h2>
-                <p class="max-w-2xl mx-auto mb-16 text-lg fade-in-element">We are built on a foundation that respects the planet, its people, and the power of design.</p>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 fade-in-element">
-                        <div class="bg-emerald-100 text-emerald-700 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2a1 1 0 011 1v8a1 1 0 01-1 1h-2a1 1 0 01-1-1z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-lora font-semibold mb-3 text-slate-800">Sustainable Materials</h3>
-                        <p>We use locally sourced, natural clay—a biodegradable resource that returns to the earth, eliminating plastic waste and reducing our carbon footprint.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 fade-in-element" style="transition-delay: 150ms;">
-                        <div class="bg-amber-100 text-amber-700 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-lora font-semibold mb-3 text-slate-800">Empowering Artisans</h3>
-                        <p>Our model ensures fair wages and direct market access for traditional craftspeople, preserving heritage skills and creating sustainable livelihoods.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 fade-in-element" style="transition-delay: 300ms;">
-                        <div class="bg-sky-100 text-sky-700 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
-                        </div>
-                        <h3 class="text-xl font-lora font-semibold mb-3 text-slate-800">Modern Aesthetics</h3>
-                        <p>We honor tradition while embracing innovation, creating custom, minimalist, and contemporary pieces that resonate with modern tastes and lifestyles.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="our-purpose" class="py-20 md:py-24 bg-stone-100 text-center">
+        <div class="container mx-auto px-6 fade-in-element">
+          <h2
+            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6"
+          >
+            A Story Baked in Earth and Purpose
+          </h2>
+          <p class="max-w-3xl mx-auto text-lg text-stone-600 mb-8">
+            Karigari is more than a brand; it's a movement born from a desire to
+            reconnect with our roots and reshape our future. Discover how a
+            timeless craft is being reimagined to solve modern problems—from
+            plastic pollution to the preservation of cultural heritage.
+          </p>
+          <a
+            href="our-story.html"
+            class="font-bold text-amber-700 hover:text-amber-800 group text-lg"
+          >
+            Read Our Full Story
+            <span
+              class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none"
+              >&rarr;</span
+            >
+          </a>
+        </div>
+      </section>
 
-        <!-- ===============================
-             GALLERY PREVIEW SECTION (Unchanged)
+      <!-- ===============================
+             HIGHLIGHTS / PILLARS SECTION
         ================================ -->
-        <section id="gallery-preview" class="py-20 md:py-24 bg-stone-100">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element">From Our Hands to Your Home</h2>
-                    <p class="max-w-2xl mx-auto text-lg fade-in-element">A glimpse into our world of handcrafted terracotta.</p>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="grid gap-4">
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/gallery-kitchenware.png" alt="Terracotta Kitchenware"></div>
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/gallery-wall-hanging.png" alt="Decorative Terracotta Wall Hanging"></div>
-                    </div>
-                    <div class="grid gap-4">
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/gallery-jewelry.png" alt="Handmade terracotta jewelry"></div>
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/gallery-planters.png" alt="A collection of terracotta planters"></div>
-                    </div>
-                    <div class="grid gap-4">
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/gallery-decor-items.png" alt="Minimalist terracotta decor items"></div>
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/gallery-pots-jars.png" alt="Terracotta pots and jars"></div>
-                    </div>
-                    <div class="grid gap-4">
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/gallery-lighting.png" alt="Custom terracotta lighting fixture"></div>
-                        <div class="fade-in-element"><img class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow" src="images/artisan-hands.png" alt="Artisan working on a piece"></div>
-                    </div>
-                </div>
-                 <div class="text-center mt-16 fade-in-element">
-                    <a href="gallery.html" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105">
-                        Explore Full Gallery
-                    </a>
-                </div>
+      <section class="py-20 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+          <h2
+            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element"
+          >
+            Our Core Principles
+          </h2>
+          <p class="max-w-2xl mx-auto mb-16 text-lg fade-in-element">
+            We are built on a foundation that respects the planet, its people,
+            and the power of design.
+          </p>
+          <div class="grid md:grid-cols-3 gap-10">
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 fade-in-element"
+            >
+              <div
+                class="bg-emerald-100 text-emerald-700 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2a1 1 0 011 1v8a1 1 0 01-1 1h-2a1 1 0 01-1-1z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-lora font-semibold mb-3 text-slate-800">
+                Sustainable Materials
+              </h3>
+              <p>
+                We use locally sourced, natural clay—a biodegradable resource
+                that returns to the earth, eliminating plastic waste and
+                reducing our carbon footprint.
+              </p>
             </div>
-        </section>
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 fade-in-element"
+              style="transition-delay: 150ms"
+            >
+              <div
+                class="bg-amber-100 text-amber-700 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-lora font-semibold mb-3 text-slate-800">
+                Empowering Artisans
+              </h3>
+              <p>
+                Our model ensures fair wages and direct market access for
+                traditional craftspeople, preserving heritage skills and
+                creating sustainable livelihoods.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 fade-in-element"
+              style="transition-delay: 300ms"
+            >
+              <div
+                class="bg-sky-100 text-sky-700 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-lora font-semibold mb-3 text-slate-800">
+                Modern Aesthetics
+              </h3>
+              <p>
+                We honor tradition while embracing innovation, creating custom,
+                minimalist, and contemporary pieces that resonate with modern
+                tastes and lifestyles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===============================
+             GALLERY PREVIEW SECTION
+        ================================ -->
+      <section id="gallery-preview" class="py-20 md:py-24 bg-stone-100">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2
+              class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element"
+            >
+              From Our Hands to Your Home
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg fade-in-element">
+              A glimpse into our world of handcrafted terracotta.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid gap-4">
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/gallery-kitchenware.png"
+                  alt="Terracotta Kitchenware"
+                />
+              </div>
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/gallery-wall-hanging.png"
+                  alt="Decorative Terracotta Wall Hanging"
+                />
+              </div>
+            </div>
+            <div class="grid gap-4">
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/gallery-jewellery.png"
+                  alt="Handmade terracotta jewelry"
+                />
+              </div>
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/gallery-planters.png"
+                  alt="A collection of terracotta planters"
+                />
+              </div>
+            </div>
+            <div class="grid gap-4">
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/gallery-decor-items.png"
+                  alt="Minimalist terracotta decor items"
+                />
+              </div>
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/gallery-pots-jars.png"
+                  alt="Terracotta pots and jars"
+                />
+              </div>
+            </div>
+            <div class="grid gap-4">
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/gallery-lighting.png"
+                  alt="Custom terracotta lighting fixture"
+                />
+              </div>
+              <div class="fade-in-element">
+                <img
+                  class="h-auto max-w-full rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  src="images/artisan-hands.png"
+                  alt="Artisan working on a piece"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-16 fade-in-element">
+            <a
+              href="gallery.html"
+              class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105"
+            >
+              Explore Full Gallery
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
-    
+
     <!-- ===============================
-         FOOTER (Unchanged)
+         FOOTER
     ================================ -->
-    <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8"><!-- ... (footer code remains the same) ... --></footer>
+    <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+          <div class="col-span-4 md:col-span-1">
+            <h3 class="font-lora text-2xl font-bold text-white mb-4">
+              Karigari
+            </h3>
+            <p class="text-sm">
+              Seeding a movement towards conscious consumption, one beautiful
+              clay product at a time.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-4 tracking-wide">
+              Quick Links
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="our-story.html"
+                  class="hover:text-amber-300 transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="hover:text-amber-300 transition-colors"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="sustainability.html"
+                  class="hover:text-amber-300 transition-colors"
+                  >Sustainability</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-300 transition-colors"
+                  >Workshops</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-4 tracking-wide">
+              Contact Us
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="mailto:hello@karigari.com"
+                  class="hover:text-amber-300 transition-colors"
+                  >hello@karigari.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+910000000000"
+                  class="hover:text-amber-300 transition-colors"
+                  >+91 000 000 0000</a
+                >
+              </li>
+              <li class="flex justify-center md:justify-start space-x-4 pt-2">
+                <a href="#" class="hover:text-amber-300"
+                  ><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.415 2.175 8.796 2.163 12 2.163zm0 1.625c-3.19 0-3.553.011-4.79.068-2.73.124-3.999 1.4-4.123 4.123-.057 1.237-.068 1.598-.068 4.79s.011 3.553.068 4.79c.124 2.723 1.393 3.999 4.123 4.123 1.237.057 1.6.068 4.79.068s3.553-.011 4.79-.068c2.73-.124 3.999-1.4 4.123-4.123.057-1.237.068-1.598-.068-4.79s-.011-3.553-.068-4.79c-.124-2.723-1.393-3.999-4.123-4.123-1.237-.057-1.598-.068-4.79-.068zm0 3.063a4.125 4.125 0 100 8.25 4.125 4.125 0 000-8.25zm0 6.625a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm5.188-7.938a.938.938 0 100-1.875.938.938 0 000 1.875z"
+                    /></svg
+                ></a>
+                <a href="#" class="hover:text-amber-300"
+                  ><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.49-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.58-.7-.02-1.36-.21-1.94-.53v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21c7.34 0 11.35-6.08 11.35-11.35 0-.17 0-.34-.01-.51.78-.56 1.45-1.26 1.99-2.06z"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-4 tracking-wide">
+              Let's Collaborate
+            </h4>
+            <p class="mb-4 text-sm">
+              Join our community. Get updates on new collections, workshops, and
+              our journey.
+            </p>
+            <form action="#">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="w-full rounded-l-md px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                />
+                <button
+                  type="submit"
+                  class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-r-md"
+                >
+                  &rarr;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm">
+          <p>
+            &copy; <span id="current-year">2025</span> Karigari. All Rights
+            Reserved. Crafted with ❤️ in Odisha.
+          </p>
+        </div>
+      </div>
+    </footer>
 
-    <!-- Internal JavaScript for Interactivity (Unchanged) -->
-    <script><!-- ... (script code remains the same) ... --></script>
+    <!-- ===============================
+         JAVASCRIPT
+    ================================ -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("main-header");
+        window.addEventListener("scroll", () => {
+          header.classList.toggle("header-scrolled", window.scrollY > 50);
+        });
 
-</body>
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        const elementsToAnimate = document.querySelectorAll(".fade-in-element");
+        elementsToAnimate.forEach((el) => {
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
 </html>

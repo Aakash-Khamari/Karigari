@@ -1,210 +1,597 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sustainability - Karigari</title>
-    
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Internal CSS for Custom Styles & Animations -->
+    <!-- Internal CSS -->
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FEFBF6;
-            color: #4A4A4A;
-        }
-        h1, h2, h3, .font-lora {
-            font-family: 'Lora', serif;
-        }
-        .hero-overlay::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(30, 45, 40, 0.6); /* Greenish, earthy overlay */
-            z-index: 1;
-        }
-        #main-header {
-            transition: background-color 0.4s ease-out, box-shadow 0.4s ease-out, color 0.4s ease-out;
-        }
-        .header-scrolled {
-            background-color: rgba(250, 245, 239, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        .header-scrolled #header-logo,
-        .header-scrolled nav a,
-        .header-scrolled #mobile-menu-button {
-            color: #44403c;
-        }
-        .header-scrolled nav a:hover {
-            color: #D97706;
-        }
-        .fade-in-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in-element.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        nav a.active-link {
-            color: #D97706;
-            font-weight: bold;
-        }
-        .header-scrolled nav a.active-link {
-            color: #D97706;
-        }
-    </style>
-</head>
-<body class="antialiased">
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fefbf6;
+        color: #4a4a4a;
+      }
+      h1,
+      h2,
+      h3,
+      .font-lora {
+        font-family: "Lora", serif;
+      }
+      #main-header {
+        transition: all 0.4s ease-out;
+      }
 
+      .header-scrolled {
+        background-color: rgba(
+          250,
+          245,
+          239,
+          0.95
+        ); /* Semi-transparent creamy beige */
+        backdrop-filter: blur(
+          10px
+        ); /* This adds the frosted glass/blur effect */
+        -webkit-backdrop-filter: blur(
+          10px
+        ); /* For Safari browser compatibility */
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .header-scrolled #header-logo,
+      .header-scrolled nav a,
+      .header-scrolled #mobile-menu-button {
+        color: #44403c;
+      }
+      .header-scrolled nav a:hover {
+        color: #d97706;
+      }
+      .fade-in-element {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .fade-in-element.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      nav a.active-link {
+        color: #d97706;
+        font-weight: bold;
+      }
+      .header-scrolled nav a.active-link {
+        color: #d97706;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
     <!-- ===============================
-         HEADER & NAVIGATION
+        HEADER & NAVIGATION
     ================================ -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" id="header-logo" class="font-lora text-3xl font-bold tracking-wider text-white transition-colors duration-300">Karigari</a>
-            
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-white hover:text-amber-300 transition-colors duration-300">Home</a>
-                <a href="our-story.html" class="text-white hover:text-amber-300 transition-colors duration-300">Our Story</a>
-                <a href="gallery.html" class="text-white hover:text-amber-300 transition-colors duration-300">Our Work</a>
-                <a href="sustainability.html" class="text-white hover:text-amber-300 transition-colors duration-300 active-link">Sustainability</a>
-                <a href="contact.html" class="text-white hover:text-amber-300 transition-colors duration-300">Contact</a>
-            </nav>
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          id="header-logo"
+          class="font-lora text-3xl font-bold tracking-wider text-white transition-colors duration-300"
+          >Karigari</a
+        >
 
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white focus:outline-none transition-colors duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="our-story.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Our Story</a
+          >
+          <a
+            href="gallery.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Our Work</a
+          >
+          <a
+            href="sustainability.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300 active-link"
+            >Sustainability</a
+          >
+          <a
+            href="contact.html"
+            class="text-white hover:text-amber-300 transition-colors duration-300"
+            >Contact</a
+          >
+        </nav>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-[#FAF5EF] bg-opacity-95 backdrop-blur-sm">
-            <a href="index.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Home</a>
-            <a href="our-story.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Our Story</a>
-            <a href="gallery.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Our Work</a>
-            <a href="sustainability.html" class="block text-amber-600 font-bold py-3 px-6 text-center bg-amber-100">Sustainability</a>
-            <a href="contact.html" class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100">Contact</a>
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-button"
+            class="text-white focus:outline-none transition-colors duration-300"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
         </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-[#FAF5EF] bg-opacity-95 backdrop-blur-sm"
+      >
+        <a
+          href="index.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Home</a
+        >
+        <a
+          href="our-story.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Our Story</a
+        >
+        <a
+          href="gallery.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Our Work</a
+        >
+        <a
+          href="sustainability.html"
+          class="block text-amber-600 font-bold py-3 px-6 text-center bg-amber-100"
+          >Sustainability</a
+        >
+        <a
+          href="contact.html"
+          class="block text-stone-700 py-3 px-6 text-center hover:bg-amber-100"
+          >Contact</a
+        >
+      </div>
     </header>
 
     <main>
-        <!-- ===============================
-             PAGE HERO
+      <!-- ===============================
+              HERO SECTION
         ================================ -->
-        <section class="relative h-[50vh] flex items-center justify-center text-center text-white bg-cover bg-center bg-fixed" style="background-image: url('images/sustainability-hero.png');">
-            <div class="hero-overlay"></div>
-            <div class="relative z-10 px-4 fade-in-element is-visible">
-                <h1 class="text-4xl md:text-6xl font-bold font-lora">Woven into the Earth</h1>
-                <p class="text-lg md:text-xl mt-4 text-stone-200">Our commitment to a healthier planet and empowered communities.</p>
-            </div>
-        </section>
+      <section
+        class="relative h-[60vh] flex items-center justify-center text-center"
+      >
+        <img
+          src="images/gallery-planters.png"
+          alt="Lush green plants in natural terracotta planters"
+          class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        />
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"
+        ></div>
+        <div class="relative z-20 px-4 text-white fade-in-element is-visible">
+          <h1
+            class="text-4xl md:text-6xl font-bold font-lora leading-tight mb-4"
+          >
+            Our Commitment to the Planet
+          </h1>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto text-stone-200">
+            Sustainability isn't just a goal; it's our foundation. Discover how
+            we weave ecological and social responsibility into every piece we
+            create.
+          </p>
+        </div>
+      </section>
 
-        <!-- ===============================
-             ECO-FRIENDLY PRACTICES
+      <!-- ===============================
+              OUR APPROACH
         ================================ -->
-        <section class="py-20 md:py-28">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="fade-in-element">
-                        <img src="images/eco-materials.png" alt="Natural clay and materials" class="rounded-lg shadow-2xl w-full h-auto object-cover">
-                    </div>
-                    <div class="fade-in-element">
-                        <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6">From Earth, For Earth</h2>
-                        <p class="mb-4 text-lg text-stone-600">
-                            Our sustainability journey begins with our most fundamental choice: material. We exclusively use locally sourced, natural clay, a resource that is abundant, non-toxic, and entirely biodegradable. Unlike plastics, our products can return to the earth without a trace, leaving no harmful legacy.
-                        </p>
-                        <ul class="list-disc list-inside space-y-2 text-stone-600">
-                            <li><strong>Zero-Waste Production:</strong> Unfired clay scraps are recycled back into new creations.</li>
-                            <li><strong>Low-Energy Kilns:</strong> We utilize traditional firing techniques that are less energy-intensive.</li>
-                            <li><strong>Natural Pigments:</strong> All colors are derived from natural, lead-free minerals.</li>
-                            <li><strong>Water Conservation:</strong> We employ water recycling systems in our workshops.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section class="py-20 md:py-24 bg-white">
+        <div class="container mx-auto px-6 fade-in-element">
+          <div class="text-center max-w-4xl mx-auto">
+            <h2
+              class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6"
+            >
+              A Closed-Loop Philosophy
+            </h2>
+            <p class="text-lg text-stone-600 mb-4">
+              At Karigari, we see sustainability as a holistic system. It begins
+              with the earth, passes through the hands of our artisans, enriches
+              your home, and ultimately, can return to the earth without harm.
+              This circular approach guides all our decisions, from sourcing
+              materials to our production processes and community engagement.
+            </p>
+            <p class="text-lg text-stone-600">
+              We are dedicated to creating products that are not only beautiful
+              and functional but also gentle on our planet.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- ===============================
-             UN SDG ALIGNMENT
+      <!-- ===============================
+              CORE PRACTICES SECTION
         ================================ -->
-        <section class="bg-stone-100 py-20 md:py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element">Aligned with Global Goals</h2>
-                <p class="max-w-3xl mx-auto mb-16 text-lg text-stone-600 fade-in-element">Our work contributes directly to the UN's Sustainable Development Goals (SDGs), turning local action into global impact.</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
-                    <div class="fade-in-element">
-                        <img src="https://via.placeholder.com/120x120/F53E2D/FFFFFF?text=SDG+8" alt="SDG 8: Decent Work and Economic Growth" class="mx-auto mb-4 rounded-lg">
-                        <h3 class="font-lora font-semibold text-slate-800">Decent Work & Economic Growth</h3>
-                        <p class="text-sm">Providing fair wages and stable employment for artisans.</p>
-                    </div>
-                    <div class="fade-in-element" style="transition-delay: 150ms;">
-                        <img src="https://via.placeholder.com/120x120/DDA63A/FFFFFF?text=SDG+11" alt="SDG 11: Sustainable Cities and Communities" class="mx-auto mb-4 rounded-lg">
-                        <h3 class="font-lora font-semibold text-slate-800">Sustainable Cities & Communities</h3>
-                        <p class="text-sm">Preserving cultural heritage and promoting local craftsmanship.</p>
-                    </div>
-                    <div class="fade-in-element" style="transition-delay: 300ms;">
-                        <img src="https://via.placeholder.com/120x120/4C9F38/FFFFFF?text=SDG+12" alt="SDG 12: Responsible Consumption and Production" class="mx-auto mb-4 rounded-lg">
-                        <h3 class="font-lora font-semibold text-slate-800">Responsible Consumption</h3>
-                        <p class="text-sm">Offering a durable, plastic-free alternative for conscious consumers.</p>
-                    </div>
-                    <div class="fade-in-element" style="transition-delay: 450ms;">
-                        <img src="https://via.placeholder.com/120x120/10689D/FFFFFF?text=SDG+15" alt="SDG 15: Life on Land" class="mx-auto mb-4 rounded-lg">
-                        <h3 class="font-lora font-semibold text-slate-800">Life On Land</h3>
-                        <p class="text-sm">Using 100% biodegradable materials that do not harm terrestrial ecosystems.</p>
-                    </div>
-                </div>
+      <section class="py-20 md:py-24 bg-stone-100">
+        <div class="container mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in-element">
+              <img
+                src="images/artisan-hands.png"
+                alt="Artisan shaping natural clay"
+                class="rounded-lg shadow-xl w-full h-full object-cover"
+              />
             </div>
-        </section>
+            <div class="fade-in-element">
+              <h2
+                class="text-3xl font-lora font-semibold text-slate-800 mb-6"
+              >
+                Our Sustainable & Ethical Practices
+              </h2>
 
-        <!-- ===============================
-             ETHICAL PRODUCTION
-        ================================ -->
-        <section class="py-20 md:py-28">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="fade-in-element md:order-2">
-                        <img src="images/ethical-production.png" alt="Artisans working in a positive environment" class="rounded-lg shadow-2xl w-full h-auto object-cover">
-                    </div>
-                    <div class="fade-in-element md:order-1">
-                        <h2 class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6">People and Planet First</h2>
-                        <p class="mb-4 text-lg text-stone-600">
-                           True sustainability is about more than just materials; it's about people. Our ethical production model is designed to empower our artisans, not exploit them. We see them as partners in our mission, and we are committed to fostering an environment of respect, safety, and growth.
-                        </p>
-                        <p class="text-stone-600">
-                           Every Karigari purchase directly supports fair wages, safe working conditions, and invests in skill-development programs that ensure this ancient craft has a prosperous future. This approach guarantees that our beautiful products are also beautiful in the way they are made.
-                        </p>
-                    </div>
+              <div class="space-y-6">
+                <!-- Eco-Friendly Materials -->
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-12 w-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-1">
+                      Eco-Friendly Materials
+                    </h3>
+                    <p class="text-stone-600">
+                      We exclusively use locally sourced, natural clay. This
+                      reduces transportation emissions and ensures our products
+                      are 100% biodegradable, non-toxic, and free from harmful
+                      chemicals or glazes.
+                    </p>
+                  </div>
                 </div>
+
+                <!-- Ethical Production -->
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-12 w-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.125-1.274-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.125-1.274.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-1">
+                      Ethical Production
+                    </h3>
+                    <p class="text-stone-600">
+                      Our artisans are partners. We ensure fair wages, safe
+                      working conditions, and a direct link to the market, which
+                      creates sustainable livelihoods and preserves cultural
+                      heritage.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Low-Impact Process -->
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 h-12 w-12 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-1">
+                      Low-Impact Process
+                    </h3>
+                    <p class="text-stone-600">
+                      We minimize waste by recycling unfired clay and water. Our
+                      firing process uses traditional, energy-efficient kilns,
+                      often fueled by natural byproducts.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===============================
+              UN SDG ALIGNMENT
+        ================================ -->
+      <section class="py-20 md:py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2
+            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element"
+          >
+            Contributing to a Global Vision
+          </h2>
+          <p
+            class="max-w-3xl mx-auto text-lg text-stone-600 mb-12 fade-in-element"
+          >
+            Our work is proudly aligned with the United Nations Sustainable
+            Development Goals (SDGs), contributing to a better and more
+-            sustainable future for all.
+          </p>
+          <div
+            class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto"
+          >
+            <!-- SDG 8 -->
+            <div class="fade-in-element text-center">
+
+              <h3 class="text-xl font-semibold mb-2 text-slate-800">
+                Goal 8: Decent Work
+              </h3>
+              <p>
+                By providing fair wages and stable employment to rural
+                artisans, we promote inclusive and sustainable economic growth.
+              </p>
+            </div>
+            <!-- SDG 12 -->
+            <div
+              class="fade-in-element text-center"
+              style="transition-delay: 150ms"
+            >
+
+              <h3 class="text-xl font-semibold mb-2 text-slate-800">
+                Goal 12: Responsible Consumption
+              </h3>
+              <p>
+                We offer a sustainable alternative to plastic and mass-produced
+                goods, encouraging mindful consumption patterns.
+              </p>
+            </div>
+            <!-- SDG 13 -->
+            <div
+              class="fade-in-element text-center"
+              style="transition-delay: 300ms"
+            >
+
+              <h3 class="text-xl font-semibold mb-2 text-slate-800">
+                Goal 13: Climate Action
+              </h3>
+              <p>
+                Our low-carbon production process and focus on local, natural
+                materials contribute to urgent action to combat climate change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===============================
+              CALL TO ACTION
+        ================================ -->
+      <section class="py-20 md:py-24 bg-amber-600 text-white">
+        <div class="container mx-auto px-6 text-center fade-in-element">
+          <h2
+            class="text-3xl md:text-4xl font-lora font-semibold mb-6"
+          >
+            Be Part of the Solution
+          </h2>
+          <p class="max-w-2xl mx-auto text-lg text-amber-100 mb-8">
+            Every Karigari piece you bring into your home supports a chain of
+            positive impact—for artisans, communities, and our planet. Choose
+            consciously.
+          </p>
+          <a
+            href="gallery.html"
+            class="bg-white hover:bg-amber-50 text-amber-700 font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105"
+          >
+            Shop with Purpose
+          </a>
+        </div>
+      </section>
     </main>
-    
+
     <!-- ===============================
-         FOOTER
+        FOOTER
     ================================ -->
     <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
-        <!-- ... (Footer code is the same as other pages) ... -->
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+          <div class="col-span-4 md:col-span-1">
+            <h3 class="font-lora text-2xl font-bold text-white mb-4">
+              Karigari
+            </h3>
+            <p class="text-sm">
+              Seeding a movement towards conscious consumption, one beautiful
+              clay product at a time.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-4 tracking-wide">
+              Quick Links
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="our-story.html"
+                  class="hover:text-amber-300 transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="hover:text-amber-300 transition-colors"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="sustainability.html"
+                  class="hover:text-amber-300 transition-colors"
+                  >Sustainability</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-300 transition-colors"
+                  >Workshops</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-4 tracking-wide">
+              Contact Us
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="mailto:hello@karigari.com"
+                  class="hover:text-amber-300 transition-colors"
+                  >hello@karigari.com</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+910000000000"
+                  class="hover:text-amber-300 transition-colors"
+                  >+91 000 000 0000</a
+                >
+              </li>
+              <li class="flex justify-center md:justify-start space-x-4 pt-2">
+                <a href="#" class="hover:text-amber-300"
+                  ><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.415 2.175 8.796 2.163 12 2.163zm0 1.625c-3.19 0-3.553.011-4.79.068-2.73.124-3.999 1.4-4.123 4.123-.057 1.237-.068 1.598-.068 4.79s.011 3.553.068 4.79c.124 2.723 1.393 3.999 4.123 4.123 1.237.057 1.6.068 4.79.068s3.553-.011 4.79-.068c2.73-.124 3.999-1.4 4.123-4.123.057-1.237.068-1.598-.068-4.79s-.011-3.553-.068-4.79c-.124-2.723-1.393-3.999-4.123-4.123-1.237-.057-1.598-.068-4.79-.068zm0 3.063a4.125 4.125 0 100 8.25 4.125 4.125 0 000-8.25zm0 6.625a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm5.188-7.938a.938.938 0 100-1.875.938.938 0 000 1.875z"
+                    /></svg
+                ></a>
+                <a href="#" class="hover:text-amber-300"
+                  ><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.49-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98-3.56-.18-6.73-1.89-8.84-4.48-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.58-.7-.02-1.36-.21-1.94-.53v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21c7.34 0 11.35-6.08 11.35-11.35 0-.17 0-.34-.01-.51.78-.56 1.45-1.26 1.99-2.06z"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-4 tracking-wide">
+              Let's Collaborate
+            </h4>
+            <p class="mb-4 text-sm">
+              Join our community. Get updates on new collections, workshops, and
+              our journey.
+            </p>
+            <form action="#">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="w-full rounded-l-md px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                />
+                <button
+                  type="submit"
+                  class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-r-md"
+                >
+                  &rarr;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="border-t border-slate-700 mt-8 pt-6 text-center text-sm">
+          <p>
+            &copy; <span id="current-year">2025</span> Karigari. All Rights
+            Reserved. Crafted with ❤️ in Odisha.
+          </p>
+        </div>
+      </div>
     </footer>
 
-    <!-- Internal JavaScript for Interactivity -->
+    <!-- ===============================
+        JAVASCRIPT
+    ================================ -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // ... (JavaScript is the same as other pages) ...
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("main-header");
+        window.addEventListener("scroll", () => {
+          header.classList.toggle("header-scrolled", window.scrollY > 50);
         });
+
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        const elementsToAnimate = document.querySelectorAll(".fade-in-element");
+        elementsToAnimate.forEach((el) => {
+          observer.observe(el);
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
