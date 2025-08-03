@@ -78,7 +78,7 @@
   </head>
   <body class="antialiased">
     <!-- ===============================
-         HEADER & NAVIGATION
+        HEADER & NAVIGATION
     ================================ -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
       <div
@@ -176,7 +176,7 @@
 
     <main>
       <!-- ===============================
-             HERO SECTION - UPDATED WITH <img> TAG
+            HERO SECTION
         ================================ -->
       <section
         class="relative h-screen flex items-center justify-center text-center"
@@ -202,16 +202,19 @@
             Handcrafted terracotta for sustainable living. Where timeless
             tradition meets modern design.
           </p>
-          <div class="space-x-4">
+          <!-- MODIFICATION HERE -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
             <a
               href="our-story.html"
-              class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105"
+              class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
             >
               Explore Our Story
             </a>
             <a
               href="gallery.html"
-              class="border-2 border-white hover:bg-white hover:text-slate-800 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105"
+              class="border-2 border-white hover:bg-white hover:text-slate-800 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               View Our Work
             </a>
@@ -220,7 +223,7 @@
       </section>
 
       <!-- ===============================
-             OUR PURPOSE SECTION
+            OUR PURPOSE SECTION
         ================================ -->
       <section id="our-purpose" class="py-20 md:py-24 bg-stone-100 text-center">
         <div class="container mx-auto px-6 fade-in-element">
@@ -249,7 +252,7 @@
       </section>
 
       <!-- ===============================
-             HIGHLIGHTS / PILLARS SECTION
+            HIGHLIGHTS / PILLARS SECTION
         ================================ -->
       <section class="py-20 md:py-24">
         <div class="container mx-auto px-6 text-center">
@@ -356,7 +359,7 @@
       </section>
 
       <!-- ===============================
-             GALLERY PREVIEW SECTION
+            GALLERY PREVIEW SECTION
         ================================ -->
       <section id="gallery-preview" class="py-20 md:py-24 bg-stone-100">
         <div class="container mx-auto px-6">
@@ -450,7 +453,7 @@
     </main>
 
     <!-- ===============================
-         FOOTER
+        FOOTER
     ================================ -->
     <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
       <div class="container mx-auto px-6">
@@ -567,7 +570,7 @@
     </footer>
 
     <!-- ===============================
-         JAVASCRIPT
+        JAVASCRIPT
     ================================ -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
