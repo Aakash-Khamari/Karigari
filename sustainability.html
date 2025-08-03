@@ -22,6 +22,7 @@
         font-family: "Inter", sans-serif;
         background-color: #fefbf6;
         color: #4a4a4a;
+        overflow-x: hidden; /* Prevent horizontal scroll */
       }
       h1,
       h2,
@@ -191,7 +192,7 @@
         ></div>
         <div class="relative z-20 px-4 text-white fade-in-element is-visible">
           <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-bold font-lora leading-tight mb-4"
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold font-lora leading-tight mb-4 break-words"
           >
             Our Commitment to the Planet
           </h1>
@@ -210,7 +211,7 @@
         <div class="container mx-auto px-6 fade-in-element">
           <div class="text-center max-w-4xl mx-auto">
             <h2
-              class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6"
+              class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6 break-words"
             >
               A Closed-Loop Philosophy
             </h2>
@@ -244,7 +245,7 @@
             </div>
             <div class="fade-in-element">
               <h2
-                class="text-3xl font-lora font-semibold text-slate-800 mb-6"
+                class="text-3xl font-lora font-semibold text-slate-800 mb-6 break-words"
               >
                 Our Sustainable & Ethical Practices
               </h2>
@@ -270,7 +271,9 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="text-xl font-semibold text-slate-800 mb-1">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-1 break-words"
+                    >
                       Eco-Friendly Materials
                     </h3>
                     <p class="text-stone-600">
@@ -302,7 +305,9 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="text-xl font-semibold text-slate-800 mb-1">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-1 break-words"
+                    >
                       Ethical Production
                     </h3>
                     <p class="text-stone-600">
@@ -334,7 +339,9 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="text-xl font-semibold text-slate-800 mb-1">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-1 break-words"
+                    >
                       Low-Impact Process
                     </h3>
                     <p class="text-stone-600">
@@ -356,7 +363,7 @@
       <section class="py-20 md:py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
           <h2
-            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element"
+            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element break-words"
           >
             Contributing to a Global Vision
           </h2>
@@ -377,7 +384,9 @@
                 alt="UN SDG 8: Decent Work and Economic Growth"
                 class="w-24 h-24 mx-auto mb-4"
               />
-              <h3 class="text-xl font-semibold mb-2 text-slate-800">
+              <h3
+                class="text-xl font-semibold mb-2 text-slate-800 break-words"
+              >
                 Goal 8: Decent Work
               </h3>
               <p class="text-stone-600">
@@ -395,7 +404,9 @@
                 alt="UN SDG 12: Responsible Consumption and Production"
                 class="w-24 h-24 mx-auto mb-4"
               />
-              <h3 class="text-xl font-semibold mb-2 text-slate-800">
+              <h3
+                class="text-xl font-semibold mb-2 text-slate-800 break-words"
+              >
                 Goal 12: Responsible Consumption
               </h3>
               <p class="text-stone-600">
@@ -413,7 +424,9 @@
                 alt="UN SDG 13: Climate Action"
                 class="w-24 h-24 mx-auto mb-4"
               />
-              <h3 class="text-xl font-semibold mb-2 text-slate-800">
+              <h3
+                class="text-xl font-semibold mb-2 text-slate-800 break-words"
+              >
                 Goal 13: Climate Action
               </h3>
               <p class="text-stone-600">
@@ -431,7 +444,7 @@
       <section class="py-20 md:py-24 bg-amber-600 text-white">
         <div class="container mx-auto px-6 text-center fade-in-element">
           <h2
-            class="text-3xl md:text-4xl font-lora font-semibold mb-6"
+            class="text-3xl md:text-4xl font-lora font-semibold mb-6 break-words"
           >
             Be Part of the Solution
           </h2>
@@ -451,12 +464,14 @@
     </main>
 
     <!-- ===============================
-        FOOTER
+        FOOTER (CORRECTED)
     ================================ -->
     <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
       <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
-          <div class="col-span-4 md:col-span-1">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left"
+        >
+          <div class="md:col-span-1">
             <h3 class="font-lora text-2xl font-bold text-white mb-4">
               Karigari
             </h3>

@@ -22,6 +22,7 @@
         font-family: "Inter", sans-serif;
         background-color: #fefbf6;
         color: #4a4a4a;
+        overflow-x: hidden; /* Prevent horizontal scroll */
       }
       h1,
       h2,
@@ -194,7 +195,7 @@
         <!-- Content -->
         <div class="relative z-20 px-4 text-white fade-in-element is-visible">
           <h1
-            class="text-4xl md:text-6xl lg:text-7xl font-bold font-lora leading-tight mb-4"
+            class="text-4xl md:text-6xl font-bold font-lora leading-tight mb-4 break-words"
           >
             Revitalizing Heritage for a Greener Tomorrow
           </h1>
@@ -202,7 +203,6 @@
             Handcrafted terracotta for sustainable living. Where timeless
             tradition meets modern design.
           </p>
-          <!-- MODIFICATION HERE -->
           <div
             class="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
@@ -228,7 +228,7 @@
       <section id="our-purpose" class="py-20 md:py-24 bg-stone-100 text-center">
         <div class="container mx-auto px-6 fade-in-element">
           <h2
-            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6"
+            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6 break-words"
           >
             A Story Baked in Earth and Purpose
           </h2>
@@ -257,7 +257,7 @@
       <section class="py-20 md:py-24">
         <div class="container mx-auto px-6 text-center">
           <h2
-            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element"
+            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element break-words"
           >
             Our Core Principles
           </h2>
@@ -365,7 +365,7 @@
         <div class="container mx-auto px-6">
           <div class="text-center mb-16">
             <h2
-              class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element"
+              class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element break-words"
             >
               From Our Hands to Your Home
             </h2>
@@ -453,12 +453,16 @@
     </main>
 
     <!-- ===============================
-        FOOTER
+        FOOTER (CORRECTED)
     ================================ -->
     <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
       <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
-          <div class="col-span-4 md:col-span-1">
+        <!-- MODIFICATION: Added grid-cols-1 for mobile -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left"
+        >
+          <!-- Column 1 -->
+          <div class="md:col-span-1">
             <h3 class="font-lora text-2xl font-bold text-white mb-4">
               Karigari
             </h3>
@@ -467,6 +471,7 @@
               clay product at a time.
             </p>
           </div>
+          <!-- Column 2 -->
           <div>
             <h4 class="font-semibold text-white mb-4 tracking-wide">
               Quick Links
@@ -500,6 +505,7 @@
               </li>
             </ul>
           </div>
+          <!-- Column 3 -->
           <div>
             <h4 class="font-semibold text-white mb-4 tracking-wide">
               Contact Us
@@ -535,6 +541,7 @@
               </li>
             </ul>
           </div>
+          <!-- Column 4 -->
           <div>
             <h4 class="font-semibold text-white mb-4 tracking-wide">
               Let's Collaborate

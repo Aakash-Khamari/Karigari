@@ -22,6 +22,7 @@
         font-family: "Inter", sans-serif;
         background-color: #fefbf6;
         color: #4a4a4a;
+        overflow-x: hidden; /* Prevent horizontal scroll */
       }
       h1,
       h2,
@@ -191,7 +192,7 @@
         ></div>
         <div class="relative z-20 px-4 text-white fade-in-element is-visible">
           <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-bold font-lora leading-tight mb-4"
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold font-lora leading-tight mb-4 break-words"
           >
             Our Story
           </h1>
@@ -210,7 +211,7 @@
           <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="text-left">
               <h2
-                class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6"
+                class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6 break-words"
               >
                 Born from a Vision for a Better Future
               </h2>
@@ -247,7 +248,7 @@
       <section class="py-20 md:py-24 bg-stone-100">
         <div class="container mx-auto px-6 text-center">
           <h2
-            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element"
+            class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-4 fade-in-element break-words"
           >
             Crafting Solutions, One Piece at a Time
           </h2>
@@ -365,7 +366,7 @@
             </div>
             <div class="order-1 md:order-2 text-left">
               <h2
-                class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6"
+                class="text-3xl md:text-4xl font-lora font-semibold text-slate-800 mb-6 break-words"
               >
                 Weaving Tradition with Modern Design
               </h2>
@@ -393,7 +394,7 @@
       <section class="py-20 md:py-24 bg-amber-600 text-white">
         <div class="container mx-auto px-6 text-center fade-in-element">
           <h2
-            class="text-3xl md:text-4xl font-lora font-semibold mb-6"
+            class="text-3xl md:text-4xl font-lora font-semibold mb-6 break-words"
           >
             Join Our Journey
           </h2>
@@ -415,12 +416,14 @@
     </main>
 
     <!-- ===============================
-        FOOTER
+        FOOTER (CORRECTED)
     ================================ -->
     <footer id="contact" class="bg-slate-800 text-stone-300 pt-16 pb-8">
       <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
-          <div class="col-span-4 md:col-span-1">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left"
+        >
+          <div class="md:col-span-1">
             <h3 class="font-lora text-2xl font-bold text-white mb-4">
               Karigari
             </h3>
